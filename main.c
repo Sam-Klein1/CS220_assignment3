@@ -13,12 +13,13 @@ int main(int argc, char ** argv)
   if (2 - t){
 	char *s = (char *) malloc (100); 
 	memset(s, 0, 100); 
-	strcpy(s, "Hello World!"); 
+	strcpy(s, "Hello world!"); 
 	puts(s); 
 	unsigned long l = reverse_in_place(s); 
 	printf("Size of rev str: %lu\n", l); 
 	puts(s); 
   }
+
   if (1 - t){
 	long l1[] = {3, 23, 32, 121, 0, 43, 95, 4};
 	long l2[] = {-823,12,-1222,84834, -328, 0, 9, -1387};
