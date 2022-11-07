@@ -13,7 +13,7 @@ int main(int argc, char ** argv)
   if (2 - t){
 	char *s = (char *) malloc (100); 
 	memset(s, 0, 100); 
-	strcpy(s, "Hello world!"); 
+	strcpy(s, "Hello World!"); 
 	puts(s); 
 	unsigned long l = reverse_in_place(s); 
 	printf("Size of rev str: %lu\n", l); 
