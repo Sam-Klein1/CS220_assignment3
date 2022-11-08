@@ -30,9 +30,11 @@ We have provided a makefile with the following explicit rules:
 ## Instructions
 Provide instructions here for compiling and running bt.c
 
-first, $ gcc -c getRBP.S -o getRBP.o\n
-second, $ gcc bt.c getRBP.o -o bt\n
-third, $ ./bt\n
+$ gcc -c getRBP.S -o getRBP.o
+
+$ gcc bt.c getRBP.o -o bt
+
+$ ./bt
 
 ## Grace days
 
