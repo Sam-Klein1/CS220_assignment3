@@ -30,6 +30,10 @@ We have provided a makefile with the following explicit rules:
 ## Instructions
 Provide instructions here for compiling and running bt.c
 
+first, $ gcc -c getRBP.S -o getRBP.o 
+second, $ gcc bt.c getRBP.o -o bt
+third, $ ./bt
+
 ## Grace days
 
 Grace days used for this assignment: -/2
