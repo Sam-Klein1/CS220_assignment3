@@ -38,14 +38,10 @@ $ ./bt
 
 ## Grace days
 
-Grace days used for this assignment: 0/2
+Grace days used for this assignment: -/2
 
 Grace days remaining: -/8
 
 ## References
 
-none
-
 ## Miscellaneous comments
-
-none
