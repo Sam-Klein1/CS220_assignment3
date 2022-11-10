@@ -40,6 +40,8 @@ $ gdb ./bt
 
 (gdb) r
 
+(gdb) bt
+
 (gdb) c
 
 
