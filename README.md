@@ -32,13 +32,20 @@ Provide instructions here for compiling and running bt.c
 
 $ gcc -c getRBP.S -o getRBP.o
 
-$ gcc bt.c getRBP.o -o bt
+$ gcc bt.c getRBP.o -o bt -g
 
-$ ./bt
+$ gdb ./bt
+
+(gdb) b print_backtrace
+
+(gdb) r
+
+(gdb) c
+
 
 ## Grace days
 
-Grace days used for this assignment: -/2
+Grace days used for this assignment: 1/2
 
 Grace days remaining: -/8
 
