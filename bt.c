@@ -23,14 +23,16 @@ unsigned long* print_backtrace(unsigned int count){
   //-The start address of main and the address of the return instruction form the bounds of main*/
 
   /*Gather count number of return addresses in the preceding frames, or until you hit a return address that is inside main*/
+
   unsigned long *curr_rbp = getRBP(); //ASM helper function to obtain rbp pointer
-  unsigned long *ret_addr;
+  int i = 0; //index of arr
+
   while (count > 0){
 
-    ret_addr = (unsigned long *)*(curr_rbp + 8); //get current address 
-    ret_arr = (unsigned long *)ret_addr; //accumulate ret_addr
-    printf("%p\n", ret_arr);
-    ret_arr++;
+    unsigned long *ret_addr = (unsigned long *)*(curr_rbp + 1); //get current address 
+    ret_arr[i] = (unsigned long)ret_addr; //accumulate ret_addr
+    printf("%p\n", ret_arr[i]);
+    //ret_arr++;
 
     // start <= ret_addr <= end (Checking if ret_addr is in bounds of main)
     if(((unsigned long *)start <= ret_addr) && (ret_addr <= (unsigned long *)end)){
@@ -38,12 +40,11 @@ unsigned long* print_backtrace(unsigned int count){
     }
     
     curr_rbp = (unsigned long *)*(curr_rbp);
+
+    i++;
     count--;
   }
   return ret_arr;
-
-  //deallocate memory 
-  free(ret_arr);
 }
 
 /* Do not change anything below this point */
